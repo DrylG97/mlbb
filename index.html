@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  
+  <style>
+  
+    body{
+      min-height: 100vh;
+      width: 100vw;
+    }
+    form{
+      text-align: center;
+    }
+    .list{
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+      margin-left: 25px;
+    }
+    
+    #label{
+      height: 50px;
+      width: 20em;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <h3>Who is the best jungler user on MLBB</h3>
+    <input type="text" id="userInput" placeholder="Enter Name" >
+    <ul class="list">
+      <li>Kairi</li>
+      <li>Dryl</li>
+      <li>Karltzy</li>
+      <li>Albert</li>
+    </ul>
+    
+    <button id="btn">SUBMIT</button>
+    <br> <br>
+    <button id="label"></button>
+  </form>
+</body>
+
+   <script>
+     const userAnswer = document.getElementById("userInput");
+     const btn = document.getElementById("btn");
+     const label = document.getElementById("label");
+     const answer = "Dryl"
+     
+     btn.onclick = function() {
+       if(userAnswer.value == answer) {
+         document.getElementById("label").textContent = "You are awesome"
+       } else {
+         document.getElementById("label").textContent = "Better luck next time"
+       }
+     }
+     
+   </script>
+
+</html>
